@@ -28,27 +28,15 @@ public class ProductRestController {
 
 	@PostMapping()
 	public ResponseEntity<Product> saveProduct(@RequestBody Product product) {
-				
+
 		return new ResponseEntity<Product>(productService.saveProduct(product), HttpStatus.CREATED);
 
 	}
 
 	@GetMapping()
-	public ResponseEntity<List<Product>> getAllProducts(){
-		
-		
-		
+	public ResponseEntity<List<Product>> getAllProducts() {
+
 		return new ResponseEntity<List<Product>>(productService.getAllProducts(), HttpStatus.OK);
 	}
-
-	
-	/*
-	 * @GetMapping("/{id}") public
-	 * ResponseEntity<Product>getProductById(@PathVariable String id) {
-	 * 
-	 * return new
-	 * ResponseEntity<Product>(productService.getProductById(id),HttpStatus.OK); }
-	 */
-	 
 
 }

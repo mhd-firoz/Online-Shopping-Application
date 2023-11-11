@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.amfa.online.shop.product.exception.ProducteNotFoundException;
 import com.amfa.online.shop.product.model.Product;
 import com.amfa.online.shop.product.repository.ProductRepository;
 import com.amfa.online.shop.product.service.ProductService;
@@ -32,11 +33,7 @@ public class ProductServiceImplementation implements ProductService{
 		return productRepository.findAll();
 	}
 
-	@Override
-	public Product getProductById(Product product) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 
 	
